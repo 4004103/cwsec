@@ -1,0 +1,769 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <meta http-equiv="imagetoolbar" content="no"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>창원시사회적경제지원센터</title>
+
+<link rel="stylesheet" href="./css/default.css">
+<link rel="stylesheet" href="./css/latest_style.css">
+<link rel="stylesheet" href="./css/default_board.css">
+<link rel="stylesheet" href="./css/default_contents.css">
+
+<!-- Bootstrap core CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="./css/carousel.css" rel="stylesheet">
+<!-- Offcans -->
+<link href="./css/offcanvas.css" rel="stylesheet">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="./css/owl.carousel.min.css">
+<link rel="stylesheet" href="./css/owl.theme.default.min.css">
+<!-- nice-select -->
+<link href="./css/nice-select.css" rel="stylesheet">
+<!-- Font Awsome CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- bxSlider -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+<style>
+	body {padding-bottom: 0;}
+
+	#navbar {height:135px ;}
+	.navbar-brand {padding:25px 0 !important;}
+
+	.navbar-sns-icon {}
+	.navbar-sns-icon ul {padding:0; list-style:none; margin-top:2px;}
+	.navbar-sns-icon ul li{float:left; margin-right:5px;}
+
+
+	.container {position:relative;}
+
+	/*상단 sns 전체검색 영역*/
+	.tnb-bar {position:absolute;  right:0; top:0px; width:340px;}
+	.tnb-bar > div {float:left}
+
+/* 전체검색 ! */
+	.nav-sch {width:200px; border:1px solid #0d78bd; margin:2px 0; height:30px;}
+	.nav-sch legend{display:none}
+	.nav-sch input[type='text'] {border:0; width:160px; height:28px;}
+	.nav-sch #sch_submit_pc {background:none; border:0; color:#0d78bd;}
+
+	@media (max-width: 1100px){
+		.tnb-bar {display:none}
+		.navbar-expand-md .navbar-toggler{display: none !important;}
+
+		.navbar-collapse {align-items:baseline; }
+		.navbar-nav {width:100%; margin-left:0}
+
+		.navbar-expand-md .navbar-nav {
+		-ms-flex-direction: column;
+		flex-direction: column;
+		}
+
+		.navbar-expand-md .navbar-nav .dropdown-menu {position:relative; left:0; top:0;}
+
+
+	}
+
+
+
+	@media (min-width: 1100px){
+		.navbar-nav {margin-top:45px;}
+		.navbar-toggler-icon {display:none}
+
+			/* 왼쪽메뉴 */
+		.navbar-expand-md .navbar-nav {
+		-ms-flex-direction: row;
+		flex-direction: row;
+		}
+
+
+	}
+
+
+	.navbar-expand-md .navbar-toggler {display: block !important; position:absolute; right:0; top:calc(50% - 17px);}
+
+	@media (max-width: 768px){
+		#navbar {height:100px;}
+		.navbar-brand {width:70%; max-width:240px; padding:17px 0 !important;}
+		.navbar-brand img{max-width:100%}
+
+	}
+
+
+	@media (min-width: 768px){
+
+		.navbar-expand-md .navbar-collapse {
+		display: -ms-flexbox!important;
+		/* display: flex!important; */
+		-ms-flex-preferred-size: auto;
+		/* flex-basis: auto; */
+		}
+	}
+
+	/* 모바일 메뉴 sns */
+	.mobile-sns-wr{width:100%; display:flex; display:-ms-flexbox; flex-direction:column;}
+	.mobile-sns-wr > div{display:flex; display:-ms-flexbox;}
+	.mobile-sns{justify-content:center;}
+	.mobile-sns a{margin:0 5px;}
+	.mobile-navbar-nav-sch{}
+	.mobile-navbar-nav-sch .nav-sch{width:100%;}
+	.mobile-navbar-nav-sch .nav-sch input[type='text']{width:calc(100% - 40px);}
+	.mobile-navbar-nav-sch .nav-sch #sch_submit_mo {padding:0; width:27px; background: none; border: 0; color: #0d78bd;}
+
+	@media (max-width: 767px){ /* 메인배너 pc, mobile 용 */
+		#myCarousel.slide-pc{display:none !important;}/* 피시 배너 숨김 */
+		.owl-btn-wrap{display:none !important;}/* 피시 배너 재생정지버튼 숨김 */
+		#myCarousel_m.slide-mobile{display:block !important;}
+		.owl-btn-wrap_m{position:relative; height:0; left:15px; bottom:30px; z-index:99;}
+		.owl-btn-wrap_m > button{display:inline-block; cursor:pointer; border:0; background:none; color:#fff;}
+	}
+
+	@media (min-width: 768px){
+		.navbar-expand-md .navbar-collapse{flex-direction:column;}
+		#myCarousel.slide-pc{display:block !important;}
+		.owl-btn-wrap{position:absolute; left:35px; bottom:20px; z-index:99;}
+		.owl-btn-wrap > button{display:inline-block; cursor:pointer; cursor:pointer; border:0; background:none; color:#fff;}
+
+		#myCarousel_m.slide-mobile{display:none !important;}/* 모바일 배너 숨김 */
+		.owl-btn-wrap_m{display:none !important;} /* 모바일 배너 재생정지버튼 숨김 */
+
+	}
+	@media (min-width: 1100px){ /* 모바일버전 sns, 통합검색 */
+		.mobile-sns-wr, .mobile-navbar-nav-sch{display:none;}
+	}
+
+	 /* 메인슬라이드 좌우, dot버튼 */
+	 .owl-theme .owl-nav { margin-top:0; color:#bbb}
+	.owl-theme .owl-nav [class*=owl-]:hover {background:none;}
+	.owl-theme .owl-prev { left: 5px; position: absolute; top: calc(50% - 10px); font-size: 20px !important;}
+	.owl-theme .owl-next { right: 5px; position: absolute; top: calc(50% - 10px); font-size: 20px !important;}
+	
+	
+
+	.owl-dots { position: absolute; bottom:10px; width: 100%; z-index: 999; width:100%; text-align: center}
+	.owl-dots .owl-dot  {width:20px; height:20px; border-radius:10px; margin:3px !important; background:#fff; border:1px solid #1a78b3; text-indent:-9999px; display:inline-block; cursor:pointer;}
+	.owl-dots .owl-dot.active  {width:40px;}
+	.owl-dots .owl-dot.active , .owl-theme .owl-dots .owl-dot:hover  {background:#1a78b3; border:1px solid #fff; }
+
+	.navbar-dark .navbar-nav a.nav-link:hover {color:#1a78b3 !important}
+
+	@media (min-width: 768px){
+		.owl-theme .owl-prev, .owl-theme .owl-next{font-size:50px !important; top: calc(50% - 25px);}
+		.owl-theme .owl-prev{left:20px;}
+		.owl-theme .owl-next{right:20px;}
+
+		.owl-theme .owl-dots .owl-dot span {width:18px; height:18px}
+		.owl-theme .owl-dots .owl-dot.active span {width:40px;}
+	}
+
+
+
+
+
+	/* 메인페이지 head 여백 높이 조정 */
+	body {
+	  padding-top: 100px;
+	}
+
+	@media (min-width: 768px) { /* 768px부터 적용 */
+		body {
+		  padding-top: 135px;
+		}
+	}
+
+	@media (min-width: 1100px) {
+		body {
+		  padding-top: 135px;
+		}
+	}
+
+	/* 메인페이지 전체 a태그 롤오버 */
+
+
+	@media (min-width: 770px) {
+		header {overflow: hidden; height:442px;}
+	}	
+
+	@media (max-width: 770px) {
+		header {overflow: hidden; max-height:600px;}
+	}
+
+
+	.container a:hover {color:#1a78b3 !important}
+
+	.mb-5{margin-bottom:30px !important;}
+
+	/* 메인 슬라이드 배너 */
+	.owl-theme .owl-nav.disabled+.owl-dots{position:absolute; bottom:0; width:100%;}
+
+	.textbox-group{background-color:#eff7fd;}
+	.textbox{padding:1rem 0;}
+	.textbox__image{display:flex; align-items:center; justify-content:center;}
+	.textbox__image img{width:50px; height:auto; }
+	.textbox__title{font-size:.85rem;  text-align:center; margin-top:.5rem; margin-bottom:0;}
+	.textbox__title a{color:#5a5a5a; text-decoration:none; font-weight:600;}
+	.textbox:hover .textbox__image{margin-top:-10px; transition:all 0.3s ease-out;}
+
+	.textbox-group .row > div{border-top:1px solid #b1ddf9;border-left:1px solid #b1ddf9;}
+	.textbox-group .row > div:nth-child(1), .textbox-group .row > div:nth-child(4){border-left:0;}
+	.textbox-group .row > div:nth-child(-n+3){border-top:0;}
+
+	.late_banner{background:#eff7fd; background-size:auto !important; background-position:center calc(100% - 30px); padding:15px; height:100%; position:relative; min-height:250px; border:1px solid #ddd;}
+	.late_banner > div{text-align:center;}
+	.late_banner > div img{max-width:100%; margin:2% 0;}
+	.late_banner h4{color: rgb(90, 90, 90); text-decoration: none; display: inline-block; position: relative; font-size: 1.25rem !important; font-weight: 600;}
+	.late_banner .late_more{position: absolute; bottom: 30px; right: 30px; display: block; width: 40px; line-height: 40px;color: #fff; background: #3997d2; border-radius: 25px; text-align: center;}
+
+	.lat_title {display: block;padding: 0; font-size: 1.5rem;}
+	.lat_title a {color: rgb(90, 90, 90); text-decoration: none; display: inline-block; position: relative; font-size: 1.25rem; font-weight: 600; margin-bottom:10px;}
+	.pic_lt2 .lat_title  span{display:inline-block; margin-right:10px; margin-top: -22.5px;}
+	.lat, .pic_lt, .pic_lt1, .pic_lt2, .late_banner{padding:30px;}
+
+
+	@media (min-width: 576px) { /* 576px부터 767px까지 적용 */
+		.late_banner{background-size:60%;}
+		.textbox__title{font-size:1rem;}
+
+	}
+
+
+	@media (min-width: 768px) { /* 768px부터 991px까지 적용 */
+		.textbox{padding:1.5rem 0;}
+		.textbox__title{margin-top:1.5rem;}
+
+		.textbox__image img{width:60px; height:auto; }
+
+
+		.textbox__title{font-size:1.2rem;}
+
+		.pic_lt2{height:100%;}
+		.late_banner{background-size:contain;}
+
+	}
+
+
+	@media (min-width: 992px) { /* 992px부터 1199px까지 적용 */
+		.lat, .pic_lt1, .pic_lt2{height:316px;}
+		.textbox-group .row > div{border:0 !important;}
+	}
+
+
+	@media (min-width: 1200px) { /* 1200px이상부터 ~~끝까지 적용 */
+
+	}
+
+
+	/* 하단배너 이미지 */
+	.loop .owl-nav{position:relative;}
+	.loop {margin-bottom:30px; padding-bottom:30px;}
+	.loop .owl-item {text-align:center; border:1px solid #bbb;  padding:10px}
+	.loop .owl-item img {width:auto; max-width:170px; display:inline;  height:40px;}
+	.loop .owl-dots {display:none}
+
+	/* 하단 배너 이전, 다음, 재생, 정지버튼 */
+	.main-bottom-slide-wr .owl-prev{position:absolute; top:-34px; left:0;}
+	.main-bottom-slide-wr .owl-next{position:absolute; top:-34px; right:1010px;}
+
+	.loop .owl-next, .loop .owl-prev {font-size:20px !important; top:-5px;}
+
+
+	.main-bottom-slide-wr .owl-theme .owl-nav [class*=owl-]{color:rgb(90, 90, 90);}
+	.main-bottom-slide-wr .owl-theme .owl-nav [class*=owl-]:hover{color:rgb(90, 90, 90);}
+
+	.main-bottom-slide-wr .owl-btn-wrap{left:80px; bottom:34px;}
+	.main-bottom-slide-wr .owl-btn-wrap > button{display:inline-block; border:0; background:none; color:rgb(90, 90, 90);}
+
+
+	#footer a:hover{text-decoration:none;}
+	.admin_btn_wrap .fas{color:#222 !important;}
+
+	@media (min-width: 576px){
+		.pc-none576{display:none;} 
+	}
+</style>
+
+<!-- jQuery CSS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/jquery.menu.js"></script>
+<script src="./js/common.js"></script>
+
+</head>
+
+<body>
+<!-- 상단 시작 { -->
+<h1 id="hd_h1">창원시사회적경제지원센터</h1>
+<div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
+
+<div id="hd_wrapper"></div>
+
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="navbar">
+	<div class="container">
+		<a class="navbar-brand" href="javascript:;"><img src="./img/logo.png" alt="창원시사회적경제지원센터 CHANGWON SOCIAL ECONOMY CENTER"></a>
+
+		<button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+				<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- 상단 전체검색 및 sns 바로가기 -->
+		<div class="tnb-bar col-12">
+			<div class="navbar-sns-icon">
+				<ul>
+					<li><a href="javascript:;"><img src="./img/icon_fa.png" width="31" height="30" alt="페이스북 바로가기" /></a></li>
+					<li><a href="javascript:;"><img src="./img/icon_in.png"  width="31" height="30"  alt="인스타그램 바로가기" /></a></li>
+					<li><a href="javascript:;"><img src="./img/icon_bl.png"  width="31" height="30"  alt="블로그 바로가기" /></a></li>
+				</ul>
+			</div>
+
+			<div class="navbar-nav-sch">
+				<fieldset class="nav-sch" >
+					<legend>사이트 내 전체검색</legend>
+					<form name="fsearchbox" method="get"onsubmit="return fsearchbox_submit(this);">
+					<input type="hidden" name="sfl" value="wr_subject||wr_content">
+					<input type="hidden" name="sop" value="and">
+					<label for="sch_stx_top_pc" class="sound_only">검색어 입력</label>
+					<input type="text" name="stx" id="sch_stx_top_pc" maxlength="20" placeholder="통합검색">
+					<button type="button" id="sch_submit_pc" value="검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+					</form>
+
+					<script>
+					function fsearchbox_submit(f)
+					{
+						if (f.stx.value.length < 2) {
+							alert("검색어는 두글자 이상 입력하십시오.");
+							f.stx.select();
+							f.stx.focus();
+							return false;
+						}
+
+						// 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+						var cnt = 0;
+						for (var i=0; i<f.stx.value.length; i++) {
+							if (f.stx.value.charAt(i) == ' ')
+								cnt++;
+						}
+
+						if (cnt > 1) {
+							alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+							f.stx.select();
+							f.stx.focus();
+							return false;
+						}
+
+						return true;
+					}
+					</script>
+
+				</fieldset>
+			</div>
+		</div>
+		<!-- 상단 전체검색 및 sns 바로가기 -->
+
+
+
+		<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+			<div class="mobile-sns-wr py-3">
+				<div class="mobile-sns">
+					<a href="javascript:;"><img src="./img/icon_fa.png" width="31" height="30" alt="페이스북 바로가기" /></a>
+					<a href="javascript:;"><img src="./img/icon_in.png"  width="31" height="30"  alt="인스타그램 바로가기" /></a>
+					<a href="javascript:;"><img src="./img/icon_bl.png"  width="31" height="30"  alt="블로그 바로가기" /></a>
+				</div>
+				<div class="mobile-navbar-nav-sch pt-3">
+					<fieldset class="nav-sch" >
+						<legend>사이트 내 전체검색</legend>
+						<form name="fsearchbox" method="get"onsubmit="return fsearchbox_submit(this);">
+						<input type="hidden" name="sfl" value="wr_subject||wr_content">
+						<input type="hidden" name="sop" value="and">
+						<label for="sch_stx_top_mo" class="sound_only">검색어 필수</label>
+						<input type="text" name="stx" id="sch_stx_top_mo" maxlength="20" placeholder="통합검색">
+						<button type="button" id="sch_submit_mo" value="검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+						</form>
+
+						<script>
+						function fsearchbox_submit(f)
+						{
+							if (f.stx.value.length < 2) {
+								alert("검색어는 두글자 이상 입력하십시오.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							// 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+							var cnt = 0;
+							for (var i=0; i<f.stx.value.length; i++) {
+								if (f.stx.value.charAt(i) == ' ')
+									cnt++;
+							}
+
+							if (cnt > 1) {
+								alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							return true;
+						}
+						</script>
+
+					</fieldset>
+				</div>
+			</div>
+			<ul class="navbar-nav ml-auto navbar-right">
+
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">알림마당</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="javascript:;">지원센터 알림</a>
+<a class="dropdown-item" href="javascript:;">유관기관</a>
+<a class="dropdown-item" href="javascript:;">창원시소식</a>
+<a class="dropdown-item" href="javascript:;">센터일정</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">자료실</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="javascript:;">연구자료</a>
+<a class="dropdown-item" href="javascript:;">홍보자료</a>
+<a class="dropdown-item" href="javascript:;">언론보도</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">사회적경제</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="javascript:;">사회적경제란?</a>
+<a class="dropdown-item" href="javascript:;">창원사회적경제</a>
+<a class="dropdown-item" href="javascript:;">창원사회적경제기업 현황</a>
+<a class="dropdown-item" href="javascript:;">창원사회적경제 이야기</a>
+<a class="dropdown-item" href="javascript:;">함께하는 단체</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">지원센터 소개</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="javascript:;">센터소개</a>
+<a class="dropdown-item" href="javascript:;">인사말</a>
+<a class="dropdown-item" href="javascript:;">조직도</a>
+<a class="dropdown-item" href="javascript:;">연혁</a>
+<a class="dropdown-item" href="javascript:;">주요사업</a>
+<a class="dropdown-item" href="javascript:;">오시는 길</a>
+</div>
+</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- } 상단 끝 -->
+
+	<header >
+		<div class="container" id="container">
+			<!-- PC버전 //-->
+			<div id="myCarousel"  class="owl-carousel owl-theme slide-pc">
+								<div class="item">
+																		<img src="./img/banner2.png" alt="사람 중심의 지속가능한 창원시 사회적경제" style="width:100%; height:auto;">
+															</div>
+								<div class="item">
+																		<img src="./img/banner1.png" alt="사회적경제가 바라는 꿈을 실현하는 진정한 파트나 창원시사회적경제지원센터" style="width:100%; height:auto;">
+															</div>
+							</div>
+
+			<ul id='carousel-custom-dots' class='owl-dots'> 
+			  			  
+			  	<li class='owl-dot'>1번 배너 이동</li> 
+			  			  
+			  	<li class='owl-dot'>2번 배너 이동</li> 
+			  			</ul>
+
+			<div class="owl-btn-wrap">
+				<button class="secondary play" ><i class="fas fa-play"></i><span class="sound_only">Play</span></button>
+				<button class="secondary stop" ><i class="fas fa-pause"></i><span class="sound_only">Stop</span></button>
+			</div>
+			<!--// PC버전 -->
+		</div>
+
+		<!-- mobile버전 //-->
+		<div id="myCarousel_m"  class="owl-carousel owl-theme slide-mobile">
+						<div class="item">
+															<img src="./img/banner2_mo.png" alt="사람 중심의 지속가능한 창원시 사회적경제" style="width:100%; height:auto;">
+												</div>
+						<div class="item">
+															<img src="./img/banner1_mo.jpg" alt="사람 중심의 지속가능한 창원시 사회적경제" style="width:100%; height:auto;">
+												</div>
+					</div>
+		<div class="owl-btn-wrap_m">
+			<button class="secondary play"><i class="fas fa-play"></i><span class="sound_only">Play</span></button>
+			<button class="secondary stop"><i class="fas fa-pause"></i><span class="sound_only">Stop</span></button>
+		</div>
+		<!--// mobile버전 -->
+	</header>
+
+<!-- 콘텐트 시작 { -->
+<!-- 게시판 또는 페이지 상단의 Parallex 이미지 지정 함 -->
+
+
+<!-- 3단 Taxt Box -->
+<div class="textbox-group px-4">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-4 col-md-4 col-lg-2">
+				<div class="textbox"> <!-- textbox -->
+					<div class="textbox__image"><a href="javascript:;"><img alt="사회적경제란?" src="./img/main-icon1.png"></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">사회적경제란?</a></h2>
+					</div>
+				</div> <!-- End of textbox_body -->
+			</div>
+			<div class="col-4 col-md-4 col-lg-2">
+				<!-- textbox -->
+				<div class="textbox">
+					<div class="textbox__image"><a href="javascript:;"><img alt="주요사업" src="./img/main-icon2.png"></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">주요사업</a></h2>
+					</div>
+				</div> <!-- End of textbox_body -->
+			</div>
+			<div class="col-4 col-md-4 col-lg-2">
+				<div class="textbox"> <!-- textbox -->
+					<div class="textbox__image"><a href="javascript:;"><img alt="사회적경제기업" src="./img/main-icon3.png"/></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">사회적경제기업</a></h2>
+					</div>
+				</div> <!-- End of textbox -->
+			</div> <!-- End of col -->
+			<div class="col-4 col-md-4 col-lg-2">
+				<div class="textbox"> <!-- textbox -->
+					<div class="textbox__image"><a href="javascript:;"><img alt="공모" src="./img/main-icon4.png"/></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">공모</a></h2>
+					</div>
+				</div> <!-- End of textbox -->
+			</div> <!-- End of col -->
+			<div class="col-4 col-md-4 col-lg-2">
+				<div class="textbox"> <!-- textbox -->
+					<div class="textbox__image"><a href="javascript:;"><img alt="교육" src="./img/main-icon5.png"/></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">교육</a></h2>
+					</div>
+				</div> <!-- End of textbox -->
+			</div> <!-- End of col -->
+
+			<div class="col-4 col-md-4 col-lg-2">
+				<div class="textbox"> <!-- textbox -->
+					<div class="textbox__image"><a href="javascript:;"><img alt="오시는 길" src="./img/main-icon6.png"/></a></div>
+					<div class="textbox__body">
+						<h2 class="textbox__title"><a href="javascript:;">오시는 길</a></h2>
+					</div>
+				</div> <!-- End of textbox -->
+			</div> <!-- End of col -->
+		</div> <!-- End of row -->
+	</div> <!-- End of container -->
+</div> <!-- End of textbox-group -->
+<!-- End of Text Box -->
+
+
+
+
+<div class="container">
+	<div class="row main-icon-wr">
+		<!-- latest -->
+		<div class="late_unit mb-5 col-md-12 col-lg-6">
+			
+<div class="lat">
+	<h4 class="lat_title"><a href="javascript:;">지원센터 알림</a></h4>
+	<ul class="">
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[이벤트]</span> 스타마을기업 이름 공모전</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 12-03</span>
+		</li>
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[강연포럼]</span> 2019 지역혁신대학 네트워크 국제포럼</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 12-02</span>
+		</li>
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[강연포럼]</span> 공유경제의 등장과 라이프스타일의 변화에 따른 공간의 재…</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 11-29</span>
+		</li>
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[교육프로그램]</span> 2020 사회적기업가 'Ready-UP!' 창업팀 모집</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 11-25</span>
+		</li>
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[강연포럼]</span> 일하기 좋은 도시 창원을 위한 열린세미나</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 11-22</span>
+		</li>
+			<li>
+			<a href="javascript:;"> <span class='lt_title'><span class='m_sca'>[이벤트]</span> 함께하는 시민장터 창원길마켓</span></a>
+			<span class="lt_date"><span class="lt_cmt"></span><i class="fa fa-clock"></i> 11-15</span>
+		</li>
+			</ul>
+
+	<a href="javascript:;" class="lt_more"><span class="sound_only">지원센터 알림</span><i class="fa fa-plus" aria-hidden="true"></i><span class="sound_only"> 더보기</span></a>
+
+
+
+</div>
+		</div>
+		<div class="late_unit mb-5 col-md-6 col-lg-3">
+			
+<div class="pic_lt1">
+	<h4 class="lat_title"><a href="javascript:;">EVENT</a></h4>
+	<ul class="row">
+			<li class="col-lg-12 col-md-12 col-12 mb-1">
+			<a href="javascript:;" class="lt_img"><img src="./img/thumb-1028422058_gQiWvOFN_97127023fe6903bf95035c94c42747ebebf98cc3_835x626.jpg" alt="2019.11.28  스타 마을기업 이름 공모전 이름공모전 당신의 재능이!! 정책이 됩니다!!!! 당신의 5분이!! 선물로 돌아옵니다!!!! 에어팟2 공기처청기 주유상품권 선물받아가기" ></a>
+			<div class="max-lines">
+			<a href="javascript:;"> 스타마을기업 이름 공모전</a></div>			<span class="lt_date"><i class="fa fa-clock"></i> 12-03</span>
+		</li>
+			</ul>
+
+</div>
+		</div>
+		<div class="late_unit mb-5 col-md-6 col-lg-3">
+			
+<div class="pic_lt2">
+    <h4 class="lat_title">
+		<a href="javascript:;" style="position:relative; padding-left:45px;">
+			<span style="position:absolute; top:17px; left:0;"><img src="./img/se-story-logo.png" alt="창원시"></span>
+			SE Story
+		</a>
+	</h4>
+    <ul class="row">
+            <li class="col-lg-12 col-md-12 col-12 mb-1">
+            <a href="javascript:;" class="lt_img"><img src="./img/thumb-1028422058_jpF6SQAx_138794e5920ca67c4d7ef2e9a1f0342f11ba11e9_333x222.png" alt="모두의경제 사회적협동조합 활동사진 3장" class="no-imgg"></a>
+            <div class="max-lines2">
+            <a href="javascript:;"> 모두의경제 사회적협동조합</a></div>
+        </li>
+            </ul>
+    <a href="javascript:;" class="lt_more"><span class="sound_only">창원사회적경제</span><i class="fa fa-arrow-right"></i><span class="sound_only"> 더보기</span></a>
+
+</div>
+		</div>
+		<!-- End of Latest -->
+	</div>
+
+	<div class="row main-late-wr">
+		<div class="late_unit mb-5 col-md-8 col-lg-8">
+			
+<div class="pic_lt">
+	<h4 class="lat_title"><a href="javascript:;">창원사회적경제 이야기</a></h4>
+	<ul class="row">
+			<li class="col-lg-4 col-md-4 col-6">
+			<a href="javascript:;" class="lt_img"><img src="./img/thumb-eaeedd2743ae6a37dcf960aedfca5158_1574907612_262_700x500.jpg" alt="찾아가는 사회적경제 홍보, 주최: 창원시일자리창출과, 주관: 창원시사회적경제협의회, 희망과 행복을 나누는 우리는 사회적경제 기업입니다." class =""></a>
+			<div class="max-lines">
+			<a href="javascript:;"> 창원시, &#034;찾아가는 사회적경제 홍보&#034;</a></div>			<span class="lt_date"><i class="fa fa-clock"></i> 11-28</span>
+		</li>
+			<li class="col-lg-4 col-md-4 col-6">
+			<a href="javascript:;" class="lt_img"><img src="./img/thumb-519cb23404a5f400e26bc50f17940e88_1574408451_9607_700x500.jpg" alt="사회적경제 공무원 특강
+사람중심 새로운창원
+ 2019년 창원경제 부흥의 원년
+일시 : 2019. 11. 20 (수) 14:00 시민홀 창원시
+
+사회적가치와 사회적 경제
+2019. 11
+(사)커뮤니티와 경제/ 대구사회적경제지원센터 김재경" class =""></a>
+			<div class="max-lines">
+			<a href="javascript:;"> 창원시, 사회적경제 공무원 특강</a></div>			<span class="lt_date"><i class="fa fa-clock"></i> 11-22</span>
+		</li>
+			<li class="col-lg-4 col-md-4 col-6">
+			<a href="javascript:;" class="lt_img"><img src="./img/thumb-519cb23404a5f400e26bc50f17940e88_1574408258_9874_700x500.jpg" alt="창원시사회적기업협의회 공동사회서비스사업 얘들아같이놀자
+일시:2019년 11월 16일(토) 장소:창원과학체험관 주최주관:창원시사회적기업협의회, 창원시사회적경제지원센터" class =""></a>
+			<div class="max-lines">
+			<a href="javascript:;"> 창원시사회적기업협의회 공동사회서비스제공사업 &#034;얘들아 같…</a></div>			<span class="lt_date"><i class="fa fa-clock"></i> 11-22</span>
+		</li>
+			</ul>
+	<a href="javascript:;" class="lt_more"><span class="sound_only">창원사회적경제 이야기</span><i class="fa fa-plus" aria-hidden="true"></i><span class="sound_only"> 더보기</span></a>
+
+</div>
+		</div>
+		<a href="javascript:;" class=" mb-5 col-md-4 col-lg-4">
+			<div class="late_banner">
+				<h4 class="lat_title">공공구매플랫폼</h4>
+				<div>
+					<img alt="경남종합상사" src="./img/late_banner-logo.png">
+					<img alt="공공구매플랫폼" src="./img/late_banner.png">
+				</div>
+
+				<span class="late_more"><i class="fa fa-arrow-right" aria-hidden="true"></i><span class="sound_only"> 더보기</span></span>
+			</div>
+		</a>
+	</div>
+</div> <!-- End of Container -->
+
+
+<!-- } 콘텐츠 끝 -->
+
+<!-- 하단 시작 { -->
+
+  <!-- Footer -->
+
+	<footer id="footer" class="pt-4 pb-4 bg-footer text-gray container-fluid">
+		<div class="container pt-1 ft_wr">
+			<div class="row">
+				<div class="col-12 col-md-4 col-lg-4 py-1 ft-logo">
+					<img src="./img/ft_logo.png" alt="창원시사회적경제지원센터 CHANGWON SOCIAL ECONOMY CENTER">
+				</div>
+				<div class="col-12 col-md-8 col-lg-8 py-1 text-gray">
+						<span class="mr-3"><i class="fas fa-map-marker-alt" title="주소"></i> 창원시 의창구 차룡로 48번길 62, 2층(팔용동, 근로자복지타운)</span><br>
+						<a href="javascript:;" class="mr-3"><i class="fas fa-phone" title="전화"></i> 055-255-8111</a>
+						<a href="javascript:;" class="mr-3"><i class="fas fa-fax" title="팩스"></i> 055-294-8111</a><br class="pc-none576">
+						<a href="javascript:;"><i class="fas fa-envelope" title="이메일"></i> cwmoducoop@naver.com<br></a>
+						<div id="ft_copy">Copyright &copy; 2019 창원시사회적경제지원센터. All rights reserved.
+						</div>
+
+						<div class="wamark_img" style="position:Absolute; right:0; top:-55px; width:180px; overflow: hidden; height:160px;">
+							<a href="javascript:;" ><img src="./img/wamark.png" border="0" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" style="max-width:100%" target="_blank" /></a> 
+						</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<!--
+-->
+
+<!-- } 하단 끝 -->
+
+<!-- Return to Top -->
+<a href="javascript:void(0);" id="return-to-top" title="상단으로 이동"><i class="fas fa-chevron-up" title="상단으로 이동"></i></a>
+
+<!-- 캘린터의 Tooltip에 필요, 반드시 부트스트랩 JS보다 먼저 로딩되도록 해야 함!!! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!--Parallex -->
+<script src="./js/parallax.js"></script>
+<!--Offcanvas -->
+<script src="./js/holder.min.js"></script>
+<script src="./js/offcanvas.js"></script>
+<!--Owl Carousel -->
+<script src="./js/owl.carousel.min.js"></script>
+<!-- bxSlider -->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!-- 메인, 서브 공통 js -->
+<script src="./js/main_common.js"></script>
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+</body>
+</html>

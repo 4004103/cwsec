@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* 표준 선택자 */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+
+* {-webkit-text-size-adjust:none; box-sizing:border-box}
+body, td, input, textarea, div, th, p, a, address ul {font-family:'Nanum Gothic','맑은고딕','나눔바른고딕', dotum, sans-serif; font-weight:300; margin:0; padding:0; font-size:16px; color:#333; line-height:1.75}
+a:link      {color:#333333; text-decoration:none}
+/* a:visited   {color:#1E64AD; text-decoration:none} */
+a:active    {color:#1E64AD; text-decoration:none}
+a:hover     {color:#1E64AD; text-decoration:none}
+form, p, h1, h2, h3, h4, h5, h6 {margin:0; padding:0}
+fieldset, img {margin:0; padding:0; border:0}
+caption, legend {display:none}
+address, em, i {font-style:normal}
+ul, ol {list-style-type:none; margin:0; padding:0}
+input, button, select {font:inherit}
+.clear {clear:both}
+*:focus {outline:none}
+
+#lnb a{font-family:'Nanum Gothic',dotum, sans-serif !important;}
+
+/* 본문바로가기 */
+#skipmenu {position:relative; margin:0 auto; padding:0; width:100%; z-index:1000}
+a.skip_navi {position:absolute; display:block; width:100%; left:0; text-align:center; top:-10000px; font-size:13px; padding:0; margin:0; z-index:500;}
+a.skip_navi:hover, a.skip_navi:focus, a.skip_navi:active {position:absolute; top:0 !important; margin:0; padding:10px 0; font-weight:bold; color:#fff; background:#21bbb1; z-index:1000}
+
+/* .clearfix:before, .clearfix:after {display:block; content:''} */
+.clearfix:before, .clearfix:after {display:inline-block; content:''; width:100%;}
+.clearfix:after {clear:both}
+
+@-webkit-keyframes loadingAnimate {
+  0%, 40%, 100% {-webkit-transform:scaleY(0.4)}
+  20% {-webkit-transform:scaleY(1.0)}
+}
+@keyframes loadingAnimate {
+  0%, 40%, 100% {transform:scaleY(0.4); -webkit-transform:scaleY(0.4)}
+  20% {transform:scaleY(1.0); -webkit-transform:scaleY(1.0)}
+}
+
+@media screen and (max-width:768px) {
+/*input, button, select {-webkit-appearance:none;}*/
+.td_chk input {-webkit-appearance:checkbox;}
+#bo_sch input, #bo_sch button {margin-top:5px;}
+}

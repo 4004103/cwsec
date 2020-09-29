@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* 아이폰 버튼스타일 초기화 */
+input[type="submit"] { cursor: pointer; -webkit-appearance: none;-webkit-border-radius: 0;}
+
+
+html.lock {height:100% !important; overflow:hidden !important}
+#wrap {position:relative; overflow:hidden}
+/* .header_position {position:absolute; top:20px;} */
+/* #header {position:fixed;  left:0; width:100%; height:auto; transition:all .3s ease; z-index:150} */
+#header {position:fixed;  left:0; width:100%; height:auto; transition:all .3s ease; z-index:150;}
+/* #header:before {position:fixed; top:-50px; left:0; width:100%; height:50px; content:''; background:#fff; transition:all .3s ease} */
+#header:before {position:fixed; top:-60px; left:0; width:100%; height:60px; content:''; background:#fff; transition:all .3s ease}
+#header.guide_less {}
+/* #header.scroll {top:0;} */
+#header.scroll {top:0; background:none;}
+#header.scroll:before {top:0; box-shadow:0 1px 3px 0 rgba(0,0,0,0.12)}
+#header.scroll #lnb > li > a {color:#333; padding-top:10px}
+#header .inner {position:relative; max-width:1400px; height:60px; margin:0 auto; padding:0 50px}
+#header.scroll #lnb > li > ul.depth2 {margin-top:-15px}
+#header h1 {position:absolute; top:5px; left:50px; width:130px}
+#header h1 img {display:block; width:100%}
+#lnb {float:right}
+#lnb > li {position:relative; display:inline-block; margin:0 30px}
+#lnb > li > a {display:block; height:60px; padding:20px 0 0 0; font-size:20px; font-weight:600; color:#fff}
+body.main #lnb > li > a, body.visual #lnb > li > a {color:#fff}
+#lnb > li > a span {position:relative; border-bottom:2px solid transparent}
+#lnb > li.on > a span {color:#1E64AD; border-color:#1E64AD}
+#lnb > li > ul.depth2 {display:none; position:absolute; margin-top:-5px; padding:10px 0; left:0; min-width:150px; border-left:2px solid #1E64AD; background:#fff}
+#lnb > li > ul.depth2 > li > a {display:block; padding:8px 20px; font-size:14px; font-weight:500}
+#lnb > li > ul.depth2 > li > a span {padding-bottom:3px; border-bottom:2px solid transparent}
+#lnb > li > ul.depth2 > li.on > a span, #lnb > li > ul.depth2 > li> a:hover span {color:#1E64AD; border-color:#1E64AD}
+#m_call {display:none; position:absolute; top:20px; left:30px; width:30px; height:30px; cursor:pointer; z-index:50;}
+#m_call.on span.top {top:4px; transform:rotate(225deg)}
+#m_call.on span.middle{display:none;}
+#m_call.on span.bottom {top:4px; transform:rotate(-45deg)}
+#m_call span {position:absolute; left:0; display:block; width:17px; height:1px; background:#fff; transition:all .4s ease}
+#m_call span.top {top:0}
+/* #m_call span.top {top:7px} */
+#m_call span.middle{top:8px;}
+#m_call span.bottom{top:17px;}
+body.main #m_call span, body.visual #m_call span {background:#fff;}
+#container {position:relative; /* padding-top:100px; */ background:#f4f4f4}
+#container:after {clear:both; display:block; content:''}
+body.main #container {padding-top:0 !important; background:none}
+body.visual #container {padding-top:0 !important}
+ul.allocation {text-align:justify; overflow:hidden}
+ul.allocation:after {display:block !important; width:100%; height:0; content:''}
+ul.allocation li {position:relative; float:none !important; display:inline-block}
+ul.allocation li.clear {margin:0; padding:0; border:none; background:none}
+ul.column2 li {width:48%}
+ul.column3 li {width:32%}
+ul.column4 li {width:23%}
+#scrollTop {display:none; position:fixed; bottom:30px; right:0; height:50px; z-index:100}
+#scrollTop .inner {max-width:1400px; margin:0 auto; padding:0 20px; text-align:center}
+#scrollTop a.talk_counsel{display:block;}
+#scrollTop a.go_top {position:relative; display:inline-block; width:45px; height:45px; text-align:center; color:#fff; line-height:45px; border-radius:50%; background:#1E64AD}
+#scrollTop a i, #scrollTop a span {position:absolute; transition:all .4s ease}
+#scrollTop a i {top:30%; left:35%}
+#scrollTop a span {width:100%; top:0; left:50%; font-size:13px; font-weight:700; margin-left:-22px; line-height:45px; opacity:0; filter:alpha(opacity='0'); transform:rotate(-360deg)}
+#scrollTop a.on i {opacity:0; filter:alpha(opacity='0'); transform:rotate(360deg)}
+#scrollTop a.on span {display:block; opacity:1; filter:alpha(opacity='100'); transform:rotate(0deg)}
+#footer {clear:both; padding:40px 0; position:Relative;}
+#footer .inner {max-width:1400px; margin:0 auto; padding:0 50px; overflow:hidden}
+#footer .inner .blogo {float:left; padding-top:30px}
+#footer .inner .info {float:left; margin-left:50px}
+#footer .inner .info p {font-size:12px; color:#999}
+#footer .inner .info ul.tel li {display:inline-block; padding-right:15px; font-size:13px; color:#999}
+#footer .inner .info ul.tel a {font-weight:bold;color:#006699}
+#footer .inner p.copyright {margin-top:12px; color:#999}
+#footer .inner p.withseoul {float:right; margin-top:5px;}
+
+
+/* 미디어쿼리 */
+@media screen and (max-width:1024px) {
+ #m_call {display:block !important}
+ #header h1 {width:110px; top:8px; left:50%; margin-left:-55px}
+ #header.scroll #m_call {top:20px; color:#333;}
+ #header.scroll #m_call span {background:#000}
+ #header .inner .lnb_wrap {display:none; position:fixed; top:50px; left:0; width:100%; height:100%; padding-top:30px; background:#fff; z-index:1000}
+ #header .inner .lnb_wrap .scroll {position:relative; height:100%; padding-bottom:40px; overflow-y:auto}
+ #lnb {float:none; width:90%; margin:0 auto}
+ #lnb > li {display:block; width:100%; margin:0; border-bottom:1px solid #dedede}
+ #lnb > li > a {font-size:21px; font-weight:500; color:#333; height:auto !important; padding:15px 0 !important}
+ #lnb > li > a.dropdown span:before {position:absolute; top:50%; left:100%; width:12px; height:2px; margin:-1px 0 0 10px; content:''; background:#333; transition:all .3s ease}
+ #lnb > li > a.dropdown span:after {position:absolute; top:50%; left:100%; width:2px; height:12px; margin:-6px 0 0 15px; content:''; background:#333; transition:all .3s ease}
+ #lnb > li.open > a.dropdown span:after {transform:rotate(-90deg)}
+ #lnb > li > ul.depth2 {position:static; border:none}
+ #lnb > li > ul.depth2 > li > a {font-size:21px; color:#999; padding:5px 30px}
+ #lnb > li > ul.depth2 > li.on > a span, #lnb > li > ul.depth2 > li> a:hover span {border-color:transparent !important}
+ #footer {padding:50px 0;}
+ #footer .inner {text-align:center !important}
+ #footer .inner .blogo {float:none; margin-bottom:30px; padding:0px 0 0 0}
+ #footer .inner .info {float:none; text-align:center; margin-left:0}
+ #footer .inner p.copyright {clear:both; float:none}
+ #footer .inner p.withseoul {float:none;}
+}
+
+@media screen and (max-width:640px) {
+ #header h1 {width:90px; top:10px; margin-left:-45px}
+ #lnb > li > a {font-size:15px}
+ #lnb > li > ul.depth2 > li > a {font-size:15px !important; padding:5px 20px}
+ #footer {padding:50px 0}
+ #footer .inner {padding:0 20px}
+ #footer .inner a {color:#999}
+ #footer .inner p.withseoul {float:none;}
+}
+
+@media screen and (max-width:480px) {
+ #footer .inner {text-align:left !important}
+ #footer .inner .info {text-align:left}
+ #footer .inner p.withseoul{float:none; width:330px;}
+}
+
+@media screen and (min-width:1387px) {
+ #footer .inner p.withseoul {float:left; margin-left:0px;}
+
+}
+
+@media screen and ( min-width:320px ) and ( max-width:500px ){
+#scrollTop { bottom:80px; }
+#scrollTop .inner{padding:10px 0;}
+}
+
+@media screen and ( min-width:501px ) {
+/* #scrollTop { bottom:30px; width:100%; } */
+#scrollTop { bottom:100px; }
+}
